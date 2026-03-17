@@ -1,167 +1,85 @@
 [
     {
-        "action": "rotate",
-        "dx": -67,
-        "dy": -4
+        "action": "wait",
+        "min": 0.5,
+        "max": 1.2,
+        "tag": "startup_delay"
     },
     {
-        "action": "rotate",
-        "dx": -28,
-        "dy": 20
-    },
-    {
-        "action": "rotate",
-        "dx": 52,
-        "dy": 99
-    },
-    {
-        "action": "rotate",
-        "dx": 150,
-        "dy": -55
-    },
-    {
-        "action": "rotate",
-        "dx": 89,
-        "dy": 10
-    },
-    {
-        "action": "rotate",
-        "dx": 104,
-        "dy": 126
-    },
-    {
-        "action": "rotate",
-        "dx": 91,
-        "dy": -29
-    },
-    {
-        "action": "rotate",
-        "dx": 63,
-        "dy": 13
-    },
-    {
-        "action": "rotate",
-        "dx": 33,
-        "dy": 42
-    },
-    {
-        "action": "rotate",
-        "dx": -159,
-        "dy": -5
-    },
-    {
-        "action": "rotate",
-        "dx": -92,
-        "dy": 3
-    },
-    {
-        "action": "rotate",
-        "dx": 114,
-        "dy": 58
-    },
-    {
-        "action": "rotate",
-        "dx": 58,
-        "dy": 32
-    },
-    {
-        "action": "rotate",
-        "dx": -18,
-        "dy": 1
-    },
-    {
-        "action": "rotate",
-        "dx": 33,
-        "dy": 2
-    },
-    {
-        "action": "rotate",
-        "dx": 320,
-        "dy": 43
-    },
-    {
-        "action": "rotate",
-        "dx": 78,
-        "dy": 14
-    },
-    {
-        "action": "rotate",
-        "dx": 210,
-        "dy": 26
-    },
-    {
-        "action": "rotate",
-        "dx": -340,
-        "dy": -23
-    },
-    {
-        "action": "rotate",
-        "dx": -93,
-        "dy": 25
-    },
-    {
-        "action": "rotate",
-        "dx": 463,
-        "dy": 66
-    },
-    {
-        "action": "rotate",
-        "dx": 61,
-        "dy": 7
-    },
-    {
-        "action": "rotate",
-        "dx": -51,
-        "dy": -2
-    },
-    {
-        "action": "rotate",
-        "dx": -38,
-        "dy": 12
-    },
-    {
-        "action": "rotate",
-        "dx": 79,
-        "dy": 9
-    },
-    {
-        "action": "rotate",
-        "dx": 114,
-        "dy": 39
-    },
-    {
-        "action": "rotate",
-        "dx": -71,
-        "dy": 11
-    },
-    {
-        "action": "rotate",
-        "dx": 115,
-        "dy": 3
-    },
-    {
-        "action": "rotate",
-        "dx": -134,
-        "dy": -2
-    },
-    {
-        "action": "rotate",
-        "dx": -96,
-        "dy": -7
-    },
-    {
-        "action": "rotate",
-        "dx": 172,
-        "dy": 25
-    },
-    {
-        "action": "rotate",
-        "dx": 53,
-        "dy": 16
-    },
-    {
-        "action": "rotate",
-        "dx": 116,
-        "dy": 16
+        "loop": -1,
+        "tag": "main_route",
+        "actions": [
+            {
+                "action": "rotate",
+                "dx": -67,
+                "dy": -4,
+                "tag": "orient"
+            },
+            {
+                "action": "walk",
+                "key": "w",
+                "duration": 2.5,
+                "until": "resource:resource_bery",
+                "tag": "search_phase"
+            },
+            {
+                "action": "wait",
+                "min": 0.3,
+                "max": 0.8
+            },
+            {
+                "action": "rotate",
+                "dx": 150,
+                "dy": -55,
+                "tag": "scan_right"
+            },
+            {
+                "action": "walk",
+                "key": "w",
+                "duration": 2.0,
+                "until": "resource:resource_bery",
+                "tag": "search_phase"
+            },
+            {
+                "action": "rotate",
+                "dx": -134,
+                "dy": -2,
+                "tag": "scan_left"
+            },
+            {
+                "action": "walk",
+                "key": "w",
+                "duration": 1.5,
+                "tag": "approach"
+            },
+            {
+                "action": "interact",
+                "tag": "collect"
+            },
+            {
+                "action": "wait",
+                "min": 0.8,
+                "max": 1.5,
+                "tag": "post_collect"
+            },
+            {
+                "action": "rotate",
+                "dx": 320,
+                "dy": 43,
+                "tag": "reorient"
+            },
+            {
+                "action": "walk",
+                "key": "w",
+                "duration": 3.0,
+                "tag": "move_next"
+            },
+            {
+                "action": "wait",
+                "min": 0.4,
+                "max": 1.0,
+                "tag": "idle_pause"
+            }
+        ]
     }
 ]
