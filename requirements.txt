@@ -1,0 +1,9 @@
+pydirectinput>=1.0.4
+mss>=7.0.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+keyboard>=0.13.5
+customtkinter>=5.2.2
+Pillow>=10.2.0
+pynput>=1.7.6
+pygetwindow>=0.0.9
